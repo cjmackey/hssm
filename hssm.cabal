@@ -61,6 +61,7 @@ test-suite testsuite
   main-is:    test.hs
   build-depends: base, binary, parsec, test-framework-quickcheck2, test-framework-hunit, test-framework, HUnit, QuickCheck
   hs-source-dirs: src, testsuite
+  ghc-options:     -Wall -fwarn-tabs -fwarn-missing-import-lists -fno-warn-missing-signatures -fwarn-monomorphism-restriction
 
 
 
