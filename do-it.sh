@@ -1,15 +1,14 @@
 #!/bin/sh
 
-cabal clean || exit 1
-cabal configure --enable-tests || exit 2
+cabal clean 2>&1 || exit 1
+cabal configure --enable-tests 2>&1 || exit 2
 echo ""
 echo "building:"
-cabal build || exit 3
+cabal build 2>&1 || exit 3
 echo ""
 echo "tests:"
-cabal test || exit 4
+cabal test 2>&1 || exit 4
 echo ""
 echo "hlint:"
-hlint src testsuite || exit 5
-
+hlint src testsuite 2>&1 || exit 5
 
